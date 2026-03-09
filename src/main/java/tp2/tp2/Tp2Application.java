@@ -3,12 +3,13 @@ package tp2.tp2;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import tp2.tp2.entities.Product;
 import tp2.tp2.repository.ProductRepository;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class Tp2Application {
 
 	public static void main(String[] args) {
