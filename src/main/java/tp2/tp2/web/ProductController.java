@@ -48,4 +48,9 @@ public class ProductController {
         productRepository.save(product);
         return "redirect:/admin/newProduct";
     }
+
+    @GetMapping("/notAuthorized")
+    public String notAuthorized(){
+        return "notAuthorized";
+    }
 }
